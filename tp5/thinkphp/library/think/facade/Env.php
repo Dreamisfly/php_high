@@ -9,18 +9,17 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// +----------------------------------------------------------------------
-// | 会话设置
-// +----------------------------------------------------------------------
+namespace think\facade;
 
-return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => 'redis',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
-];
+use think\Facade;
+
+/**
+ * @see \think\Env
+ * @mixin \think\Env
+ * @method void load(string $file) static 读取环境变量定义文件
+ * @method mixed get(string $name = null, mixed $default = null) static 获取环境变量值
+ * @method void set(mixed $env, string $value = null) static 设置环境变量值
+ */
+class Env extends Facade
+{
+}

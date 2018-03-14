@@ -9,18 +9,19 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// +----------------------------------------------------------------------
-// | 会话设置
-// +----------------------------------------------------------------------
+namespace think\facade;
 
-return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => 'redis',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
-];
+use think\Facade;
+
+/**
+ * @see \think\Config
+ * @mixin \think\Config
+ * @method bool has(string $name) static 检测配置是否存在
+ * @method array pull(string $name) static 获取一级配置
+ * @method mixed get(string $name) static 获取配置参数
+ * @method mixed set(string $name, mixed $value = null) static 设置配置参数
+ * @method array reset(string $prefix ='') static 重置配置参数
+ */
+class Config extends Facade
+{
+}

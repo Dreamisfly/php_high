@@ -9,18 +9,16 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// +----------------------------------------------------------------------
-// | 会话设置
-// +----------------------------------------------------------------------
+namespace think\facade;
 
-return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => 'redis',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
-];
+use think\Facade;
+
+/**
+ * @see \think\Url
+ * @mixin \think\Url
+ * @method string build(string $url = '', mixed $vars = '', mixed $suffix = true, mixed $domain = false) static URL生成 支持路由反射
+ * @method void root(string $root) static 指定当前生成URL地址的root
+ */
+class Url extends Facade
+{
+}

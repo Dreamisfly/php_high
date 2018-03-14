@@ -9,18 +9,16 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// +----------------------------------------------------------------------
-// | 会话设置
-// +----------------------------------------------------------------------
+namespace think\facade;
 
-return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => 'redis',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
-];
+use think\Facade;
+
+/**
+ * @see \think\Build
+ * @mixin \think\Build
+ * @method void run(array $build = [], string $namespace = 'app', bool $suffix = false) static 根据传入的build资料创建目录和文件
+ * @method void module(string $module = '', array $list = [], string $namespace = 'app', bool $suffix = false) static 创建模块
+ */
+class Build extends Facade
+{
+}

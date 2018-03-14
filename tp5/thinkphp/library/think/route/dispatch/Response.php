@@ -9,18 +9,15 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// +----------------------------------------------------------------------
-// | 会话设置
-// +----------------------------------------------------------------------
+namespace think\route\dispatch;
 
-return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => 'redis',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
-];
+use think\route\Dispatch;
+
+class Response extends Dispatch
+{
+    public function run()
+    {
+        return $this->dispatch;
+    }
+
+}

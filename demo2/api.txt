@@ -1,0 +1,6 @@
+/**
+ * 计算两个数据的求和
+ * @param $a 被加数
+ * @param $b 加数
+ * @return number  两个数的和
+ */
